@@ -40,14 +40,20 @@ These are intentionally kept simple and beginner-friendly.
 
 ## Compile
 
-Use `nvcc`:
+Use `GPU Runtime` in Google Colab :
 
-```bash
-nvcc vector_add.cu -o vector_add
-nvcc saxpy.cu -o saxpy
-nvcc matrix_mul_naive.cu -o matrix_mul_naive
-nvcc matrix_mul_tiled.cu -o matrix_mul_tiled
-nvcc reduction_sum.cu -o reduction_sum
+```python
+!nvidia-smi
+!pip install nvcc4jupyter
+%load_ext nvcc4jupyter
+!/usr/local/cuda/bin/nvcc --version
+
+for each file you : 
+!nvcc vector_add.cu -o vector_add 
+!nvcc saxpy.cu -o saxpy
+!nvcc matrix_mul_naive.cu -o matrix_mul_naive
+!nvcc matrix_mul_tiled.cu -o matrix_mul_tiled
+!nvcc reduction_sum.cu -o reduction_sum
 ```
 
 ## Run
