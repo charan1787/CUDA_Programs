@@ -66,4 +66,4 @@ for each file you :
 ./reduction_sum
 ```
 
-Date : 24th Tuesday 2026
+Date : 24th March 2026
