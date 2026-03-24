@@ -1,12 +1,13 @@
 #  CUDA Programs
 
-This repo contains 5 CUDA programs:
+This repo contains 6 CUDA programs:
 
 1. `vector_add.cu`
 2. `saxpy.cu`
 3. `matrix_mul_naive.cu`
 4. `matrix_mul_tiled.cu`
 5. `reduction_sum.cu`
+6. `image_blur.cu`
 
 These are intentionally kept simple and beginner-friendly.
 
@@ -38,6 +39,13 @@ These are intentionally kept simple and beginner-friendly.
 - synchronization
 - block-level partial sums
 
+### 6. Image Blur / Convolution
+- 2D thread mapping
+- one thread per output pixel
+- neighborhood computation
+- boundary handling
+- stencil-style GPU thinking
+
 ## Compile
 
 Use `GPU Runtime` in Google Colab :
@@ -54,6 +62,7 @@ for each file you :
 !nvcc matrix_mul_naive.cu -o matrix_mul_naive
 !nvcc matrix_mul_tiled.cu -o matrix_mul_tiled
 !nvcc reduction_sum.cu -o reduction_sum
+!nvcc image_blur.cu -o image_blur
 ```
 
 ## Run
@@ -64,6 +73,7 @@ for each file you :
 ./matrix_mul_naive
 ./matrix_mul_tiled
 ./reduction_sum
+./image_blur
 ```
 
 Date : 24th March 2026
