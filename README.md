@@ -65,3 +65,5 @@ for each file you :
 ./matrix_mul_tiled
 ./reduction_sum
 ```
+
+Date : 24th Tuesday 2026
